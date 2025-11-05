@@ -1,0 +1,63 @@
+\documentclass{article}
+
+\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage{graphicx} % Required for inserting images
+
+% Set up bibliography
+\usepackage[sorting=none]{biblatex}
+
+% Uncomment and replace this with bibliography, then uncomment the bibliography at the end
+% \addbibresource{references.bib}
+
+\usepackage[hidelinks,colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref} % Links, url images
+
+
+\usepackage{booktabs} % Better tables
+\usepackage{sectsty} % Sans-serif font
+\usepackage{newtxtext}
+
+\usepackage{mathtools} % Subequations, floor/ceil
+
+\usepackage{siunitx} % Units
+\usepackage{mhchem} % Chemical formulae
+% The rest are math symbols
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{amsfonts}
+
+% Redefine title-generating command
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+\begin{flushleft}
+  \sffamily{\huge\textbf{\@title}\\
+  \vspace{10pt}}
+  \large \textbf{\@author\ -- \@date}
+\end{flushleft}\egroup
+}
+\makeatother
+
+% Set up header
+\usepackage{fancyhdr}
+    \fancyfoot{}
+    \lhead{Georgia Tech Planetary Exploration Lab}
+    \chead{}
+    \rhead{\thepage}
+    \pagestyle{fancy}
+
+% Section headings
+
+% \renewcommand{\section}{}
+
+\title{\textsc{$title$}}
+\author{$author$}
+\date{$date$}
+
+\begin{document}
+\allsectionsfont{\sffamily}
+\maketitle
+
+$body$
+%u Uncomment this at the end
+% \printbibliography
+\end{document}

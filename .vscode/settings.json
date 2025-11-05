@@ -1,0 +1,16 @@
+{
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "command-runner.commands": {
+        "Build Docker Image": "docker build -t doc-writing-test ${workspaceFolder}",
+        "Open Interactive Docker Shell": "docker run --name doc-writing-test -it --rm --entrypoint /bin/ash doc-writing-test",
+        "Open Interactive Docker Shell (root)": "docker run --name doc-writing-test -it --rm --entrypoint /bin/ash -u root doc-writing-test",
+        "Copy Build Directory From Container": "docker cp doc-writing-test:/app/build .",
+        "Compile Current File": "docker run --name doc-writing-test doc-writing-test ${fileBasename} && docker cp doc-writing-test:/app/build . && docker rm doc-writing-test",
+        "test": "echo ${fileBasename}"
+    }
+}
